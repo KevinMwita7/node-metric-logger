@@ -1,3 +1,4 @@
+// Assignment Version Number: BEJ202102
 /**
  * Finds sum of the elements in an array 
  * @param arr array for which to get the sum
