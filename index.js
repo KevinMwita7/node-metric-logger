@@ -34,10 +34,14 @@ app.delete("/:metric", async (req, res) => {
     return res.send("OK");
 });
 
+app.get('/', (req, res) => {
+    res.send('OK');
+})
+
 // Running on port 0 means choose a random port. Useful because
 // jest runs test in paralled and 3000 might already be in use
 // resulting in an error
-const port = process.env.NODE_ENV === "test" ? 0 : 443;
+const port = process.env.NODE_ENV === "test" ? 0 : 3000;
 const server = app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // Export the server for testing purposes
