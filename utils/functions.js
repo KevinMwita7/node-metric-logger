@@ -68,7 +68,6 @@ function getInActiveMetricWindows(metrics) {
     return new Promise((resolve, reject) => {
         let now = Date.now();
         let averages = [];
-        console.log(metrics)
         metrics.forEach(metricWindow => {
             // If the difference between the current time and the metric
             // window is less than 10 seconds then calculate it's average
