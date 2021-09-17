@@ -89,6 +89,7 @@ function getInActiveMetricWindows(metrics) {
 function getMetric(metrics) {
     return new Promise(async (resolve, reject) => {
         let averages = await getInActiveMetricWindows(metrics);
+        console.log(averages);
         if(averages.length) {
             resolve(median(averages));
         } else {
